@@ -1,7 +1,7 @@
 package task_manager.Controller;
 
-import task_manager.Models.User;
-import task_manager.Services.UserServices;
+import task_manager.Models.TaskList;
+import task_manager.Services.TaskListServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,45 +10,43 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/user")
-public class UserController {
+@RequestMapping("/tasklists")
+public class TaskListController {
 
     @Autowired
-    private UserServices userServices;
+    private TaskListServices taskListServices;
 
-    @PostMapping("/create")
-    ResponseEntity<User> create(@RequestBody User user) {
+    @PostMapping("/create/{userId}")
+    ResponseEntity<TaskList> create(
+            @RequestBody TaskList taskList,
+            @PathVariable long userId) {
+
         return new ResponseEntity<>(
-                userServices.createuser(user),
+                taskListServices.createTaskList(taskList, userId),
                 HttpStatus.CREATED
         );
     }
-
-
     @GetMapping("/getall")
-    ResponseEntity<List<User>> getall() {
+    ResponseEntity<List<TaskList>> getall() {
         return new ResponseEntity<>(
-                userServices.getalluser(),
+                taskListServices.getAllTaskLists(),
                 HttpStatus.OK
         );
     }
 
-
     @PutMapping("/update")
-    ResponseEntity<User> update(@RequestBody User user) {
+    ResponseEntity<TaskList> update(@RequestBody TaskList taskList) {
         return new ResponseEntity<>(
-                userServices.updateuser(user),
+                taskListServices.updateTaskList(taskList),
                 HttpStatus.ACCEPTED
         );
     }
-
-
     @DeleteMapping("/delete/{id}")
     ResponseEntity<String> delete(@PathVariable long id) {
-        userServices.deleteUser(id);
+        taskListServices.deleteTaskList(id);
 
         return new ResponseEntity<>(
-                "User deleted successfully",
+                "TaskList deleted successfully",
                 HttpStatus.OK
         );
     }
