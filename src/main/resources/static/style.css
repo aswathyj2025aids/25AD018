@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f1ea;
+    margin: 0;
+    padding: 40px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    color: #5b3a29;
+}
+
+h2 {
+    color: #5b3a29;
+}
+
+.subtitle {
+    color: #777;
+}
+
+
+/* USER COUNT */
+
+.count-box {
+    background: white;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px #ccc;
+}
+
+.count-box h1 {
+    font-size: 45px;
+}
+
+
+/* SECTION */
+
+.section {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #ccc;
+}
+
+
+/* INPUTS */
+
+input,
+select {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+/* BUTTON */
+
+button {
+    background: #7b4b2a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+
+/* USER CARD */
+
+.user-card {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #ccc;
+}
+
+
+/* TASK LIST */
+
+.task-list {
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #ccc;
+}
+
+
+/* TASK */
+
+.task {
+    background: #f5f1ea;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.task h4 {
+    margin: 0 0 8px 0;
+}
+
+.task p {
+    margin: 5px 0;
+}
+
+
+/* DELETE */
+
+.delete-button {
+    background: #b33a3a;
+}
+
+
+/* EDIT */
+
+.edit-button {
+    background: #5b6f8f;
+}
+
+
+a {
+    color: #7b4b2a;
+    text-decoration: none;
+}

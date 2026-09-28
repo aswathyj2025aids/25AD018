@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Task Manager</h1>
+    <p class="subtitle">User Dashboard</p>
+
+    <!-- TOTAL USERS -->
+    <div class="count-box">
+        <h2>Total Users</h2>
+        <h1 id="userCount">0</h1>
+    </div>
+
+
+    <!-- NEW USER -->
+    <div class="section">
+
+        <h2>Create New User</h2>
+
+        <input type="text"
+               id="newUserName"
+               placeholder="Name">
+
+        <input type="email"
+               id="newUserEmail"
+               placeholder="Email">
+
+        <input type="password"
+               id="newUserPassword"
+               placeholder="Password">
+
+        <button onclick="createUser()">
+            Create User
+        </button>
+
+    </div>
+
+
+    <!-- USERS -->
+    <h2>Users</h2>
+
+    <div id="userList">
+        Loading users...
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

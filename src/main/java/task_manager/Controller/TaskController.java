@@ -57,6 +57,14 @@ public class TaskController {
                 HttpStatus.OK
         );
     }
+
+    @GetMapping("/today")
+    ResponseEntity<List<Task>> today() {
+        return new ResponseEntity<>(
+                taskServices.getTodayTasks(),
+                HttpStatus.OK
+        );
+    }
     @ExceptionHandler(IllegalArgumentException.class)
     ResponseEntity<String> handleException(IllegalArgumentException e) {
 

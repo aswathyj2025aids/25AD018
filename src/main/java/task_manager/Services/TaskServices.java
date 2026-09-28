@@ -78,6 +78,23 @@ public class TaskServices {
         return taskRepository.save(task);
     }
 
+    public List<Task>
+    getTodayTasks() {
+
+        List<Task> tasks = taskRepository.findAll();
+        List<Task> todayTasks = new java.util.ArrayList<>();
+
+        for (Task task : tasks) {
+
+            if (task.getDueDate().equals(java.time.LocalDate.now())) {
+
+                todayTasks.add(task);
+            }
+        }
+
+        return todayTasks;
+    }
+
     public void deleteTask(long id) {
         taskRepository.deleteById(id);
     }
